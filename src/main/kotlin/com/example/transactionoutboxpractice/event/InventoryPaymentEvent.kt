@@ -8,4 +8,10 @@ class InventoryPaymentEvent(
     fun toEventRecord(): EventRecord {
         return EventRecord(event)
     }
+
+    companion object {
+        fun from(event: String): InventoryPaymentEvent {
+            return InventoryPaymentEvent(event)
+        }
+    }
 }
