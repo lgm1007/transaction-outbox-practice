@@ -13,4 +13,8 @@ class Inventory(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null
+
+    fun increaseCount() {
+        count++
+    }
 }
