@@ -17,4 +17,8 @@ class Inventory(
     fun increaseCount() {
         count++
     }
+
+    fun decreaseCount() {
+        count--
+    }
 }

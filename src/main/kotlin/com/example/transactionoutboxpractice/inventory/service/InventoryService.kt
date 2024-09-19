@@ -10,9 +10,9 @@ class InventoryService(
     private val inventoryRepository: InventoryRepository
 ) : InventoryCommand {
     @Transactional
-    override fun updateCountByItem(item: String) {
+    override fun updateCountDecreaseByItem(item: String) {
         val inventory = inventoryRepository.findByItem(item) ?: fail("Item: ${item}에 해당하는 Inventory가 존재하지 않습니다.")
 
-        inventory.increaseCount()
+        inventory.decreaseCount()
     }
 }
